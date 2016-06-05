@@ -18,7 +18,10 @@ SPA.defineView('classfy',{
 	    'class.tap': function (e) {
 	      $(e.el).addClass('active').siblings().removeClass('active');
 				$(".classfy-container").eq($(e.el).index()).addClass('active').siblings().removeClass('active');
-	    }
+	    },
+			'goto.det':function(){
+				SPA.open('det');
+			}
 	},
 
 	// init:{
@@ -29,7 +32,7 @@ SPA.defineView('classfy',{
 		'show':function(){
 			var vm = this.getVM();
 			$.ajax({
-				url: '/api/getclassfynan.php',
+				url: '/duoshangwang/mock/getclassfynan.json',
 				success: function (res){
 
 					var data = res.data;

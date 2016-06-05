@@ -41,7 +41,7 @@
 						<p>上装</p>
 						<ul ms-repeat-value="livelist">
 							<li></li>
-							<li>
+							<li action-type= "goto.det">
 								<img ms-src="value[0].imgsrc"/>
 								<em ms-text="value[0].title"></em>
 							</li>

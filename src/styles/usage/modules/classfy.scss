@@ -56,7 +56,7 @@
     section{
         @include flex();
         width: 100%;
-        overflow: hidden;
+        //overflow: hidden;
         @include flexbox();
         @include box-sizing(border-box);
         @include border(.01rem 0 0 0,#b4b4b4);
@@ -86,7 +86,6 @@
             @include flex();
             background: #fff;
             @include flexbox();
-
             .classfy-container{
               @include flex();
               //height: 100%;

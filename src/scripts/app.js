@@ -7,6 +7,7 @@ require('./views/home.js');
 require('./views/shopcar.js');
 require('./views/msg.js');
 require('./views/my.js');
+require('./views/det.js');
 require('./views/index.js');
 
 // 配置视图的信息
