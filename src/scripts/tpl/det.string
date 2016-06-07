@@ -25,18 +25,22 @@
 				<p>
 
 				</p>
-				<ul class="det-sec">
+				<ul class="det-sec" ms-repeat-value="detlist">
 					<li class="det-kong"></li>
 					<li>
-							<img src="/duoshangwang/images/det1.jpg"/>
+							<img ms-src="value[0].imgsrc"/>
 							<div class="det-tit">
-									<span>博莱登哥 男装休闲外套 B-504</span>
-									<em></em>
+									<div ms-text="value[0].title"></div>
+									<em ms-text="value[0].price"></em>
 							</div>
 					</li>
 					<li class="det-kong"></li>
 					<li>
-							<img src="/duoshangwang/images/det1.jpg"/>
+							<img ms-src="value[1].imgsrc"/>
+							<div class="det-tit">
+									<div ms-text="value[1].title"></div>
+									<em ms-text="value[1].price"></em>
+							</div>
 					</li>
 					<li class="det-kong"></li>
 				</ul>

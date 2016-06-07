@@ -21,7 +21,7 @@ SPA.defineView('index',{
 	    name: 'content',
 	    container: '.m-index-container',
 	    views: ['home', 'classfy', 'shopcar', 'msg','my'],
-	    defaultTag: 'classfy'
+	    defaultTag: 'home'
 	}],
 
 	init: {

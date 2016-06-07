@@ -78,89 +78,89 @@
 						</ul>
 					</div>
 				</div>
-				<div class="classfy-container" spa-widget="scroll">
+				<div class="classfy-container" spa-widget="scroll" data-scroll-id="classfyScroll">
 					<div>
-					<p>上衣</p>
-					<ul ms-repeat-value="nvlist">
-						<li></li>
-						<li>
-							<img ms-src="value[0].imgsrc"/>
-							<em ms-text="value[0].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[1]">
-							<img ms-src="value[1].imgsrc"/>
-							<em ms-text="value[1].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[2]">
-							<img ms-src="value[2].imgsrc"/>
-							<em ms-text="value[2].title"></em>
-						</li>
-						<li></li>
-					</ul>
-					<p>裙子</p>
-					<ul ms-repeat-value="nvqlist">
-						<li></li>
-						<li>
-							<img ms-src="value[0].imgsrc"/>
-							<em ms-text="value[0].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[1]">
-							<img ms-src="value[1].imgsrc"/>
-							<em ms-text="value[1].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[2]">
-							<img ms-src="value[2].imgsrc"/>
-							<em ms-text="value[2].title"></em>
-						</li>
-						<li></li>
-					</ul>
-				</div>
-				</div>
-				<div class="classfy-container" spa-widget="scroll">
-					<div>
-					<p>女包</p>
-					<ul ms-repeat-value="nvbao">
-						<li></li>
-						<li>
-							<img ms-src="value[0].imgsrc"/>
-							<em ms-text="value[0].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[1]">
-							<img ms-src="value[1].imgsrc"/>
-							<em ms-text="value[1].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[2]">
-							<img ms-src="value[2].imgsrc"/>
-							<em ms-text="value[2].title"></em>
-						</li>
-						<li></li>
-					</ul>
-					<p>男包</p>
-					<ul ms-repeat-value="nanbao">
-						<li></li>
-						<li>
-							<img ms-src="value[0].imgsrc"/>
-							<em ms-text="value[0].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[1]">
-							<img ms-src="value[1].imgsrc"/>
-							<em ms-text="value[1].title"></em>
-						</li>
-						<li></li>
-						<li ms-class-hidden="!value[2]">
-							<img ms-src="value[2].imgsrc"/>
-							<em ms-text="value[2].title"></em>
-						</li>
-						<li></li>
-					</ul>
-				</div>
+						<p>上衣</p>
+						<ul ms-repeat-value="nvlist">
+							<li></li>
+							<li>
+								<img ms-src="value[0].imgsrc"/>
+								<em ms-text="value[0].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[1]">
+								<img ms-src="value[1].imgsrc"/>
+								<em ms-text="value[1].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[2]">
+								<img ms-src="value[2].imgsrc"/>
+								<em ms-text="value[2].title"></em>
+							</li>
+							<li></li>
+						</ul>
+						<p>裙子</p>
+						<ul ms-repeat-value="nvqlist">
+							<li></li>
+							<li>
+								<img ms-src="value[0].imgsrc"/>
+								<em ms-text="value[0].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[1]">
+								<img ms-src="value[1].imgsrc"/>
+								<em ms-text="value[1].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[2]">
+								<img ms-src="value[2].imgsrc"/>
+								<em ms-text="value[2].title"></em>
+							</li>
+							<li></li>
+						</ul>
+					</div>
+					</div>
+					<div class="classfy-container" spa-widget="scroll">
+						<div>
+						<p>女包</p>
+						<ul ms-repeat-value="nvbao">
+							<li></li>
+							<li>
+								<img ms-src="value[0].imgsrc"/>
+								<em ms-text="value[0].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[1]">
+								<img ms-src="value[1].imgsrc"/>
+								<em ms-text="value[1].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[2]">
+								<img ms-src="value[2].imgsrc"/>
+								<em ms-text="value[2].title"></em>
+							</li>
+							<li></li>
+						</ul>
+						<p>男包</p>
+						<ul ms-repeat-value="nanbao">
+							<li></li>
+							<li>
+								<img ms-src="value[0].imgsrc"/>
+								<em ms-text="value[0].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[1]">
+								<img ms-src="value[1].imgsrc"/>
+								<em ms-text="value[1].title"></em>
+							</li>
+							<li></li>
+							<li ms-class-hidden="!value[2]">
+								<img ms-src="value[2].imgsrc"/>
+								<em ms-text="value[2].title"></em>
+							</li>
+							<li></li>
+						</ul>
+					</div>
 				</div>
 				<div class="classfy-container">
 						美容美妆

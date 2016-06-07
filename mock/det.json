@@ -1,0 +1,46 @@
+{
+  "ret":true,
+  "errCode":0,
+  "det":[
+    {
+      "imgsrc":"/duoshangwang/images/det1.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det2.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det3.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det4.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det5.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det6.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det7.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    },
+    {
+      "imgsrc":"/duoshangwang/images/det8.jpg" ,
+      "title":"秋冬外套",
+      "price":"￥90"
+    }
+  ]
+}

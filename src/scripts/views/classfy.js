@@ -15,7 +15,12 @@ SPA.defineView('classfy',{
 	}],
 
 	bindActions: {
-	    'class.tap': function (e) {
+	    'class.tap': function (e, data) {
+				// var myScroll = this.widgets.classfyScroll;
+				// console.log(myScroll);
+				// myScroll.refresh();
+				//var w=window.innerHeight;
+				//var offset = $(e.el).offset().top;
 	      $(e.el).addClass('active').siblings().removeClass('active');
 				$(".classfy-container").eq($(e.el).index()).addClass('active').siblings().removeClass('active');
 	    },
@@ -30,7 +35,9 @@ SPA.defineView('classfy',{
 
 	bindEvents: {
 		'show':function(){
+
 			var vm = this.getVM();
+
 			$.ajax({
 				url: '/duoshangwang/mock/getclassfynan.json',
 				success: function (res){
@@ -70,6 +77,7 @@ SPA.defineView('classfy',{
 					vm.nvbao = nvbaotempArr;
 					vm.nanbao = nanbaotempArr;
 				}
+				//myScroll.refresh();
 			})
 		}
 	}

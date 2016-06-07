@@ -20,13 +20,14 @@ SPA.defineView('guide',{
 
 	bindEvents:{
 		'beforeShow' : function(){
+			var myScroll = this.widgets.classfysCroll;
 //			var guideSwiper = new Swiper('#guide-swiper',function(){
 //				loop:false
 //			});
 			setTimeout(
 				function(){
 					SPA.open('index');
-					
+
 				}
 			,1000)
 		}
