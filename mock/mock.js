@@ -5,8 +5,16 @@ module.exports = {
       respondwith:'./getclassfynan.json'
     },
     {
-      pattern :/\/api\/det.php/,
+      pattern :/\/api\/det.php$/,
       respondwith:'./det.json'
+    },
+    {
+      pattern: /\/api\/det.php\?type\=more$/,
+      respondwith: './det-more.json'
+    },
+    {
+      pattern: /\/api\/det.php\?type\=new$/,
+      respondwith: './det-new.json'
     }
   ]
 }
