@@ -26,9 +26,7 @@
 	              <img src="/duoshangwang/images/indicator_arrow.png"/>
 	              <span>下拉刷新...</span>
 	          </div>
-				<p>
-
-				</p>
+				<p></p>
 				<ul class="det-sec" ms-repeat-value="detlist">
 					<li class="det-kong"></li>
 					<li>

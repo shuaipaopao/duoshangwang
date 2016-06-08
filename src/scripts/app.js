@@ -15,3 +15,8 @@ require('./views/index.js');
 SPA.config({
   indexView: 'guide'
 });
+
+// var indexView = SPA.util.storage('isVisited') ? 'index' : 'guide';
+// SPA.config({
+//   indexView: indexView
+// });

@@ -81,4 +81,5 @@ SPA.defineView('classfy',{
 			})
 		}
 	}
+
 })
