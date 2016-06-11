@@ -5,12 +5,9 @@ SPA.defineView('classfy',{
 	plugins: ['delegated',{
 		name:'avalon',
 		options:function(vm){
-			vm.livelist = [];
-			vm.livelist1 = [];
-			vm.nvlist = [];
-			vm.nvqlist = [];
-			vm.nvbao = [];
-			vm.nanbao = [];
+			vm.classfy1=[];
+			vm.classfy2=[];
+			vm.classfy3=[];
 		}
 	}],
 
@@ -22,63 +19,100 @@ SPA.defineView('classfy',{
 				//var w=window.innerHeight;
 				//var offset = $(e.el).offset().top;
 	      $(e.el).addClass('active').siblings().removeClass('active');
-				$(".classfy-container").eq($(e.el).index()).addClass('active').siblings().removeClass('active');
+				//$(".classfy-container").eq($(e.el).index()).addClass('active').siblings().removeClass('active');
+				var offseth = $(e.el).offset().top;
+				var h = window.innerHeight;
+				numb = $(e.el).index() + 1;
+				var vm = this.getVM();
+				//console.log(that.param.id);
+				$.ajax({
+					url: '/api/classfy.php',
+					data:{
+						id:numb
+					},
+					success:function(res){
+							vm.classfy1 = res.data1;
+							vm.classfy2 = res.data2;
+							vm.classfy3 = res.data3;
+							var data1 = res.data1;
+							var data2 = res.data2;
+							var data3 = res.data3;
+							var tempArr1 =[];
+							var tempArr2 = [];
+							for(var i=0;i<Math.ceil(data1.length/3);i++){
+									tempArr1[i] = [];
+									tempArr1[i][0] = data1[3*i];
+									tempArr1[i][1] = data1[3*i+1];
+									tempArr1[i][2] = data1[3*i+2];
+							}
+							for(var i=0;i<Math.ceil(data2.length/3);i++){
+									tempArr2[i] = [];
+									tempArr2[i][0] = data2[3*i];
+									tempArr2[i][1] = data2[3*i+1];
+									tempArr2[i][2] = data2[3*i+2];
+							}
+							vm.classfy1 = tempArr1;
+							vm.classfy2 = tempArr2;
+					}
+				});
+				// console.log(offseth);
+				// console.log(h);
+				// if(0<$(e.el).index()<4){
+				// 	this.listScroll.scrollBy(0,-51*$(e.el).index());
+				// }
+				// if(8<$(e.el).index()<11){
+				// 	this.listScroll.scrollBy(0,51*$(e.el).index());
+				// }
+
 	    },
 			'goto.det':function(){
 				SPA.open('det');
 			}
 	},
 
-	// init:{
-	// 	classfySwiper: null
-	// },
+	init:{
+		listScroll:null,
+		numb:null
+	},
 
 	bindEvents: {
 		'show':function(){
-
+			var that = this;
 			var vm = this.getVM();
-
 			$.ajax({
-				url: '/duoshangwang/mock/getclassfynan.json',
-				success: function (res){
-
-					var data = res.data;
-					var kuzi = res.kuzi;
-					var nvlist = res.nvlist;
-					var nvqlist = res.nvqlist;
-					var nvbao = res.nvbao;
-					var nanbao = res.nanbao;
-					var tempArr =[];
-					var kuzitempArr = [];
-					var nvtempArr = [];
-					var nvqtempArr = [];
-					var nvbaotempArr = [];
-					var nanbaotempArr = [];
-
-					function list(data,tempArr,data){
-						for(var i=0;i<Math.ceil(data.length/3);i++){
-								tempArr[i] = [];
-								tempArr[i][0] = data[3*i];
-								tempArr[i][1] = data[3*i+1];
-								tempArr[i][2] = data[3*i+2];
+				url: '/api/classfy.php',
+				data:{
+					id:1
+				},
+				success:function(res){
+						vm.classfy1 = res.data1;
+						vm.classfy2 = res.data2;
+						vm.classfy3 = res.data3;
+						var data1 = res.data1;
+						var data2 = res.data2;
+						var data3 = res.data3;
+						var tempArr1 =[];
+						var tempArr2 = [];
+						for(var i=0;i<Math.ceil(data1.length/3);i++){
+								tempArr1[i] = [];
+								tempArr1[i][0] = data1[3*i];
+								tempArr1[i][1] = data1[3*i+1];
+								tempArr1[i][2] = data1[3*i+2];
 						}
-					}
-					list(data,tempArr,data);
-					list(kuzi,kuzitempArr,kuzi);
-					list(nvlist,nvtempArr,nvlist);
-					list(nvqlist,nvqtempArr,nvqlist);
-					list(nvbao,nvbaotempArr,nvbao);
-					list(nanbao,nanbaotempArr,nanbao);
-
-					vm.livelist = tempArr;
-					vm.livelist1 = kuzitempArr;
-					vm.nvlist = nvtempArr;
-					vm.nvqlist = nvqtempArr;
-					vm.nvbao = nvbaotempArr;
-					vm.nanbao = nanbaotempArr;
+						for(var i=0;i<Math.ceil(data2.length/3);i++){
+								tempArr2[i] = [];
+								tempArr2[i][0] = data2[3*i];
+								tempArr2[i][1] = data2[3*i+1];
+								tempArr2[i][2] = data2[3*i+2];
+						}
+						vm.classfy1 = tempArr1;
+						vm.classfy2 = tempArr2;
 				}
-				//myScroll.refresh();
-			})
+			});
+
+			// this.listScroll = that.widgets.listScroll;
+			// this.listScroll.options.crollX = false;
+			// this.listScroll.options.crollY = true;
 		}
 	}
 
